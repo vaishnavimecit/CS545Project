@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sense - Home</title>
+    <link rel="shortcut icon" href="images/logo1.png" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,700|Varela+Round" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Archivo Narrow' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Caesar+Dressing|Gothic+A1&display=swap" rel="stylesheet">
+  </head>
+  <header>
+    <a href="home.html"><img class = "icon" src= "images/logo.ico" alt="Logo" /></a>
+    <a id="menu" class="header__menu"><img class="hamMenu" src= "images/hamMenu.png" alt="Menu"></a>
+    <div class="pages__list">
+    <h4 class="pages__item"><a href="Activities.html">Micro Breaks</a></h4>
+    <h4 class="pages__item"><a href="Practice.html">Practice</a></h4>
+    <h4 class="pages__item"><a href="https://quizlet-clone.herokuapp.com/">Create Quiz</a></h4>
+    <h4 class="pages__item"><a href="FAQ.html">FAQ</a></h4>
+    <!--<h4 class="pages__item"><img class = "searchbutton" src= "images/search.png" alt="search button"></h4> -->
+    </div>
+  </header>
+
+  <nav id="drawer" class="nav">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="https://www.google.com" target="_blank">Search<img class = "searchbutton" src= "images/search.png" alt="search button" /></a></li>
+            <li class="nav__item"><a href="Activities.html">Micro Breaks</a></li>
+            <li class="nav__item"><a href="https://quizlet-clone.herokuapp.com/">Practice</a></li>
+            <li class="nav__item"><a href="CreateQuiz.html">Create Quiz</a></li>
+            <li class="nav__item"><a href="FAQ.html">FAQ</a></li>
+          </ul>
+  </nav>
+
+  <body>
+    <div id="page-container">
+      <div id="content-wrap">
+        <h2>Sense Around You!</h2>
+            <ul> 
+              <li><b>At home:</b><br>
+                  <img src="images/Home/1.png" /><br>
+                  Learning and games for family fun or home study.<br>
+                  Sense makes studying awesome - together! <br>
+                  Study leagues within the Sense app connect and engage learners with friendly competition.
+              </li>
+              <li><b>At school: </b><br>
+                  <img src="images/Home/2.png" /><br>
+                  Make this school year awesome with Sense! <br>
+                  Engaging group and distance learning for teachers and students. <br>
+              </li>
+              <li><b>At work: </b><br>
+                <img src="images/Home/3.png" /><br>
+                For training, e-learning, interactive presentations and more.
+              </li>
+              <li><b>At Academy: </b><br>
+                <img src="images/Home/4.png" /><br>
+                Explore content and join one of the world’s largest educator communities.</li>
+            </ul>
+      </div>
+    </div>
+    <footer>
+      <p>Stevens Institute of Technology &copy; 2020</p>
+    </footer>
+    <script>
+      /*
+       * Open the drawer when the menu ison is clicked.
+       */
+      var menu = document.querySelector('#menu');
+      var main = document.querySelector('main');
+      var drawer = document.querySelector('.nav');
+
+      menu.addEventListener('click', function(e) {
+        drawer.classList.toggle('open');
+        e.stopPropagation();
+      });
+      main.addEventListener('click', function() {
+        drawer.classList.remove('open');
+      });
+    </script>
+  </body>
+</html>
