@@ -20,6 +20,11 @@
     <h4 class="pages__item"><a href="FAQ.html">FAQ</a></h4>
     <!--<h4 class="pages__item"><img class = "searchbutton" src= "images/search.png" alt="search button"></h4> -->
     </div>
+	
+	<style>
+
+	</style>
+	
   </header>
   <nav id="drawer" class="nav">
           <ul class="nav__list">
@@ -32,9 +37,61 @@
   </nav>
 
   <body>
+  <form>
+  
+  <fieldset>
+    <label for="firstName">Enter Question</label>
+    <input type="text" name="name" id="firstName" placeholder="Questions like: What does HTML stand for?">
+  </fieldset>
+
+  <fieldset>
+    <label for="textarea">Enter Answer in detail</label>
+    <textarea name="textarea" id="textarea" placeholder="Tell us in detail about the answer: "></textarea>
+  </fieldset>
+
+  <fieldset>
+    <legend>Answer type 1</legend>
+    <input type="checkbox" id="check1" name="checkboxes" checked>
+    <label for="check1">Checkbox 1</label><br>
+    <input type="checkbox" id="check2" name="checkboxes">
+    <label for="check2">Checkbox 2</label><br>
+    <input type="checkbox" id="check3" name="checkboxes">
+    <label for="check3">Checkbox 3</label>
+  </fieldset>
+  
+  <fieldset>
+    <legend>Answer type 2</legend>
+    <input type="radio" id="radio1" name="radios" checked>
+    <label for="radio1">Radio 1</label><br>
+    <input type="radio" id="radio2" name="radios">
+    <label for="radio2">Radio 2</label><br>
+    <input type="radio" id="radio3" name="radios">
+    <label for="radio3">Radio 3</label>
+  </fieldset>
+
+  <fieldset>
+    <label for="select-choice">Answer type 3</label>
+    <select name="select-choice" id="select-choice">
+      <option value="Choice 1">- - select one from options below - -</option>
+      <option value="Choice 2">Yes!</option>
+      <option value="Choice 3">They're kinda cool, yeah.</option>
+      <option value="Choice 4">Meh... not really.</option>
+      <option value="Choice 5">What's Transformers?</option>
+    </select>
+  </fieldset>
+
+  <button >Submit</button>
+</form>
+  
+  
   <footer>
       <p>Stevens Institute of Technology &copy; 2020</p>
     </footer>
+	<script>
+		$("button").click(function(e) {
+  e.preventDefault();
+});
+	</script>
     <script>
       /*
        * Open the drawer when the menu ison is clicked.
