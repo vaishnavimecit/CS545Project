@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "public": "public",
+    "site": "sensegaming",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "function": "app"
+      }
+    ]
+  }
+}

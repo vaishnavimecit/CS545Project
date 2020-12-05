@@ -1,0 +1,48 @@
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sense - Crete Quiz</title>
+        <link rel="shortcut icon" href="/functions/images/logo1.png" type="image/x-icon" />
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Oswald:300,700|Varela+Round" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Archivo Narrow' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css?family=Caesar+Dressing|Gothic+A1&display=swap" rel="stylesheet">
+    </head>
+    <header>
+        <a href="/"><img class="icon" src="../images/logo.ico" alt="Logo" /></a>
+        <div class="pages__list">
+            <h4 class="pages__item"><a href="/">Home</a></h4>
+            <h4 class="pages__item"><a href="/activities">Micro Breaks</a></h4>
+            <h4 class="pages__item"><a href="/flash">Create Cards</a></h4>
+            <h4 class="pages__item"><a href="/createquiz">Create Quiz</a></h4>
+            <h4 class="pages__item"><a href="/faq">FAQ</a></h4>
+        </div>
+    </header>
+
+    <body>
+
+        <form action="/insert_data" method="post">
+            <fieldset>
+                <legend>Add Quiz</legend>
+                Question:<br>
+                <input type="text" name="ques">
+                <br>
+                Answer:<br>
+                <input type="text" name="ans">
+                <br><br>
+                <input type="submit" value="Submit">
+            </fieldset>
+        </form>
+
+        <h2>Question: {{db_result.firstname}}</h2>
+        <h3>Answer: {{db_result.lastname}}</h3>
+
+
+        <footer>
+            <p>Stevens Institute of Technology &copy; 2020</p>
+        </footer>
+    </body>
+
+</html>

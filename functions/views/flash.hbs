@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Sense - Create Flash Cards</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/mains.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,700|Varela+Round" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Archivo Narrow' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Caesar+Dressing|Gothic+A1&display=swap" rel="stylesheet">
+  </head>
+
+  <header>
+    <a href="/"><img class="icon" src="../images/logo.ico" alt="Logo" /></a>
+    <div class="pages__list">
+      <h4 class="pages__item"><a href="/">Home</a></h4>
+      <h4 class="pages__item"><a href="/activities">Micro Breaks</a></h4>
+      <h4 class="pages__item"><a href="/flash">Create Cards</a></h4>
+      <h4 class="pages__item"><a href="/createquiz">Create Quiz</a></h4>
+      <h4 class="pages__item"><a href="/faq">FAQ</a></h4>
+    </div>
+  </header>
+
+  <body>
+
+    <section class="nav py-3 sticky-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <button class="btn btn-green" data-toggle="modal" data-target="#modal">What's special</button>
+            <button class="btn btn-blue " id="btn">Create Cards</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-lg-12 d-flex justify-content-center">
+          <div class="flashcard">
+            <div class="flashcard__side flashcard__side--front">
+              <h1 id="flashcard__front" class="text-center m-3"></h1>
+            </div>
+            <div class="flashcard__side flashcard__side--back">
+              <h1 id="flashcard__back" class="text-center m-3"></h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-between">
+        <i class="fas fa-caret-left icon-arrow" id="leftArrow"></i>
+        <h5 class="mt-4 text-secondary" id="cardIndex"></h5>
+        <i class="fas fa-caret-right icon-arrow" id="rightArrow"></i>
+      </div>
+    </div>
+
+
+    <div class="container mt-5">
+      <div class="row input-box">
+        <div class="col-lg-6 d-flex justify-content-center">
+          <input type="text" placeholder="Enter Question Here..." class="form1 input">
+        </div>
+        <div class="col-lg-6 d-flex justify-content-center">
+          <input type="text" placeholder="Enter Answer Here..." class="form2 input">
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <div class="test">
+        <div class="row input-box">
+          <div class="col-lg-6 d-flex justify-content-center">
+            <input type="text" placeholder="Enter Question Here..." class="form1 input">
+          </div>
+          <div class="col-lg-6 d-flex justify-content-center">
+            <input type="text" placeholder="Enter Answer Here..." class="form2 input">
+            <i class="fas fa-trash icon-delete" id="delete-input"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="newInput"></div>
+
+
+
+    <div class="container my-4">
+      <div class="row input-box">
+        <div class="col-lg-12 text-center">
+          <button class="btn btn-transparent" id="addInputField"><i class="fas fa-plus"></i> ADD A NEW INPUT</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL -->
+
+    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+         aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">About This Page</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Sense is a study app that allows someone to create multiple flashcards to help learn something new. This
+              app is inspired by <a href="https://www.quizlet.com">quizlet.com</a>. Simply enter a question & answer and
+              it will appear on the front and the back. In order to see the back, simply click on the card. If you want
+              to see the next set, click on the arrows. Finally, in order to delete a field click the trash can and then
+              click on create cards again!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+
+    <footer>
+      <p>Stevens Institute of Technology &copy; 2020</p>
+    </footer>
+  </body>
+
+</html>
